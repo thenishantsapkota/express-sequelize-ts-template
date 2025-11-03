@@ -22,14 +22,48 @@ Includes modern tooling, structured architecture, and batteries-included setup f
 ## 🏗️ Project Structure
 
 ```
-src/
-├── config/ # Environment & configuration setup
-├── database/ # Sequelize models, migrations & seeders
-├── modules/ # Feature modules (controllers, services, routes)
-├── middlewares/ # Express middlewares
-├── misc/ # Utility helpers (logger, error handler, etc.)
-├── translations/ # i18n translation files
-└── index.ts # Application entry point
+├── package.json
+├── pnpm-lock.yaml
+├── README.md
+├── src
+│   ├── error
+│   │   ├── api.badRequest.ts
+│   │   ├── api.conflict.ts
+│   │   ├── api.error.ts
+│   │   ├── api.forbidden.ts
+│   │   ├── api.notFound.ts
+│   │   ├── api.server.ts
+│   │   ├── api.unauthorized.ts
+│   │   ├── api.validation.ts
+│   │   └── index.ts
+│   ├── index.ts
+│   ├── lib
+│   │   ├── config.ts
+│   │   ├── index.ts
+│   │   └── setup
+│   │       ├── app.ts
+│   │       └── db.ts
+│   ├── middlewares
+│   │   ├── error.middleware.ts
+│   │   ├── index.ts
+│   │   ├── logger.middleware.ts
+│   │   └── transaction.middleware.ts
+│   ├── misc
+│   │   ├── index.ts
+│   │   ├── logger.ts
+│   │   └── transaction.ts
+│   ├── models
+│   │   └── index.ts
+│   ├── modules
+│   ├── response
+│   │   ├── api.response.ts
+│   │   └── index.ts
+│   ├── router
+│   │   └── index.ts
+│   └── types
+│       ├── config.types.ts
+│       └── index.ts
+└── tsconfig.json
 ```
 
 ---
