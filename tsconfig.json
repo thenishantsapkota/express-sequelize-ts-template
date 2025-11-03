@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ESNext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "isolatedModules": true,
+    "pretty": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "#src": ["src/index.ts"],
+      "#src/*": ["src/*"],
+
+      "#lib": ["src/lib/index.ts"],
+      "#lib/*": ["src/lib/*"],
+
+      "#setup": ["src/lib/setup/index.ts"],
+      "#setup/*": ["src/lib/setup/*"],
+
+      "#middlewares": ["src/middlewares/index.ts"],
+      "#middlewares/*": ["src/middlewares/*"],
+
+      "#misc": ["src/misc/index.ts"],
+      "#misc/*": ["src/misc/*"],
+
+      "#error": ["src/error/index.ts"],
+      "#error/*": ["src/error/*"],
+
+      "#models": ["src/models/index.ts"],
+      "#models/*": ["src/models/*"],
+
+      "#modules": ["src/modules/index.ts"],
+      "#modules/*": ["src/modules/*"],
+
+      "#response": ["src/response/index.ts"],
+      "#response/*": ["src/response/*"],
+
+      "#router": ["src/router/index.ts"],
+      "#router/*": ["src/router/*"],
+
+      "#types": ["src/types/index.ts"],
+      "#types/*": ["src/types/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"]
+}
